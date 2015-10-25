@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using MvcMusicStore.Models;
+using MvcMusicStorage.Models;
 
-namespace MvcMusicStore.Controllers
+namespace MvcMusicStorage.Controllers
 {
     [Authorize]
     public class ManageController : Controller
