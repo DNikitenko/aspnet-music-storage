@@ -58,11 +58,11 @@ namespace MvcMusicStorage
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "973663611098-39h8ga3g35dvl082f4joir6f4fpn1c4j.apps.googleusercontent.com",
+                ClientSecret = "b6W864LvCbYUbuH__vIpgVpg"
+            });
         }
     }
 }
