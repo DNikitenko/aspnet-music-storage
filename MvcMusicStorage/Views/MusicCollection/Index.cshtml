@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MvcMusicStorage.Models.Artist>
+
+@{
+    ViewBag.Title = "Your music";
+}
+
+<div class="container body-content">
+    <div class="row">
+        <div class="col-md-3">
+            @Html.Partial("ArtistView", Model)
+        </div>
+        <div class="col-md-9">
+
+        </div>
+    </div>
+</div>
