@@ -10,6 +10,7 @@ namespace MvcMusicStorage.Controllers
     public class MusicCollectionController : Controller
     {
         // GET: MusicCollection
+        [Authorize]
         public ActionResult Index()
         {
             var artistsList = new List<Artist>

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MvcMusicStorage.Models.Artist>
 
 @{
-    ViewBag.Title = "Your music";
+    ViewBag.Title = "My music collection";
 }
 
 <div class="container body-content">
@@ -14,3 +14,8 @@
         </div>
     </div>
 </div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/list-customizer")
+}
