@@ -29,5 +29,7 @@ namespace MvcMusicStorage.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Artist> Artists { get; set; }
     }
 }

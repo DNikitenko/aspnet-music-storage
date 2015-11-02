@@ -1,4 +1,6 @@
-﻿using MvcMusicStorage.Models;
+﻿using MvcMusicStorage.BLL.Interfaces;
+using MvcMusicStorage.BLL.Repositories;
+using MvcMusicStorage.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +11,14 @@ namespace MvcMusicStorage.Controllers
 {
     public class MusicCollectionController : Controller
     {
+        IArtistRepository artistRepository = new ArtistRepository();
+
         // GET: MusicCollection
         [Authorize]
         public ActionResult Index()
         {
-            var artistsList = new List<Artist>
-            {
-                new Artist { Name = "Metallica" },
-                new Artist { Name = "Amorphis" },
-                new Artist { Name = "Gogol Bordello" }
-            };
-
-            return View(artistsList.OrderBy(x => x.Name));
+            var artists = artistRepository.GetAll().OrderBy(x => x.Name);
+            return View(artists);
         }
     }
 }
