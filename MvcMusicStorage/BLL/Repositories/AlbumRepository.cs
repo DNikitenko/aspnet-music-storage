@@ -8,19 +8,20 @@ using System.Web;
 namespace MvcMusicStorage.BLL.Repositories
 {
     /// <summary>
-    /// Provides functionality for artists retrieving
+    /// Default implementation of IAlbumRepository
     /// </summary>
-    public class ArtistRepository : IArtistRepository
+    public class AlbumRepository : IAlbumRepository
     {
         /// <summary>
-        /// Get non-filtered artists list
+        /// Get all albums of specified artist
         /// </summary>
+        /// <param name="artistId"></param>
         /// <returns></returns>
-        public IEnumerable<Models.Artist> GetAll()
+        public IEnumerable<Models.Album> GetArtistAlbums(int artistId)
         {
             using (var context = new ApplicationDbContext())
             {
-                return context.Artists.ToList();
+                return context.Albums.Where(album => album.ArtistID == artistId);
             }
         }
     }
