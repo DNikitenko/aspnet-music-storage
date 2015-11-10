@@ -20,7 +20,7 @@ namespace MvcMusicStorage.BLL.Repositories
         {
             using (var context = new ApplicationDbContext())
             {
-                return context.Artists.ToList();
+                return context.Artists.Include("Albums").ToList();
             }
         }
     }

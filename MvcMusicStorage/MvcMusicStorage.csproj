@@ -237,6 +237,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\MusicCollection\ArtistView.cshtml" />
     <Content Include="Views\MusicCollection\Index.cshtml" />
+    <Content Include="Views\MusicCollection\AlbumView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

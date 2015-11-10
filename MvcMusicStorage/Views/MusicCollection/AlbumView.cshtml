@@ -1,0 +1,10 @@
+﻿@model IEnumerable<MvcMusicStorage.Models.Artist>
+
+@foreach (var album in Model.SelectMany(x => x.Albums))
+{
+    <div class="album-block">
+        <img src="@album.ImgUrl" width="150" height="150" />
+        <div class="album-name">@album.Name</div>
+        <div>@album.Year</div>
+    </div>
+}

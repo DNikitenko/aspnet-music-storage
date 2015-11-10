@@ -17,7 +17,7 @@ namespace MvcMusicStorage.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            var artists = artistRepository.GetAll().OrderBy(x => x.Name);
+            var artists = artistRepository.GetAll().OrderBy(x => x.Name).ToList();
             return View(artists);
         }
     }

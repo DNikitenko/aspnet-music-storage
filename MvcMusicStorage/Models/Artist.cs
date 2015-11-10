@@ -27,5 +27,10 @@ namespace MvcMusicStorage.Models
         /// Additional performer information
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// List of performer's albums
+        /// </summary>
+        public ICollection<Album> Albums { get; set; }
     }
 }
