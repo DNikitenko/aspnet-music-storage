@@ -34,3 +34,7 @@ textarea {
 .album-name {
     padding: 5px 0;
 }
+
+.list-group .list-group-item {
+    cursor: pointer;
+}

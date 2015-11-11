@@ -18,5 +18,11 @@ namespace MvcMusicStorage.BLL.Interfaces
         /// <param name="artistId"></param>
         /// <returns></returns>
         IEnumerable<Album> GetArtistAlbums(int artistId);
+
+        /// <summary>
+        /// Get all stored albums
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<Models.Album> GetAll();
     }
 }

@@ -9,16 +9,29 @@ using System.Web.Mvc;
 
 namespace MvcMusicStorage.Controllers
 {
+    [Authorize]
     public class MusicCollectionController : Controller
     {
         IArtistRepository artistRepository = new ArtistRepository();
+        IAlbumRepository albumRepository = new AlbumRepository();
 
         // GET: MusicCollection
-        [Authorize]
         public ActionResult Index()
         {
             var artists = artistRepository.GetAll().OrderBy(x => x.Name).ToList();
             return View(artists);
+        }
+
+        public ActionResult ArtistAlbums(int id)
+        {
+            var albums = albumRepository.GetArtistAlbums(id);
+            return PartialView("AlbumView", albums);
+        }
+
+        public ActionResult Albums()
+        {
+            var albums = albumRepository.GetAll();
+            return PartialView("AlbumView", albums);
         }
     }
 }

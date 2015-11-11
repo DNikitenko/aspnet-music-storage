@@ -4,7 +4,7 @@
     @foreach (var artist in Model)
     {
         <li class="list-group-item">
-            @artist.Name
+            <div artist-id="@artist.ArtistID">@artist.Name</div>
         </li>
     }
 </ul>

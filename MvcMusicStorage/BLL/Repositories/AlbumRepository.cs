@@ -21,7 +21,19 @@ namespace MvcMusicStorage.BLL.Repositories
         {
             using (var context = new ApplicationDbContext())
             {
-                return context.Albums.Where(album => album.ArtistID == artistId);
+                return context.Albums.Where(album => album.ArtistID == artistId).ToList();
+            }
+        }
+
+        /// <summary>
+        /// Get all stored albums
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Models.Album> GetAll()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                return context.Albums.ToList();
             }
         }
     }
